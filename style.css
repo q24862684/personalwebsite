@@ -69,7 +69,9 @@ td{
 hr{
   border: 2px solid;
 }
-#my-work
+#my-work{
+  text-align: center;
+}
 #my-work-gallery{
   text-align: center;
 }
@@ -96,8 +98,11 @@ hr{
 .item-info:hover{
   opacity: 1;
 }
-#contact-me{}
+#contact-me{
+  text-align: center;
+}
 form.contact-form{
+  text-align: left;
   width: 70%;
   margin: 0 auto;
 }
@@ -129,3 +134,63 @@ form.contact-form{
 .bar{
   border: 2px solid #444444
 }
+@media screen and (min-width: 1024px) {
+  .menu-button,
+  .menu-button-checkbox {
+    display: none;
+  }
+}
+@media screen and (max-width:1023px){
+  .container{
+    width:auto;
+  }
+  .menu-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    line-height: 40px;
+    color: white;
+    background: transparent;
+    padding: 0px 15px ;
+    border: 0;
+  }
+  .menu-button-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 55px;
+    opacity: 0;
+    z-index: 1;
+  }
+  .menu-button-checkbox:checked ~ .menu {
+   display: block;
+ }
+  .menu {
+    display: none;
+    margin-top: 0;
+    padding-right: 0;
+    left: 0;
+    top: 40px;
+    width: 150px;
+    height: 100%;
+    background: #DDDDDD;
+  }
+  .menu li {
+    border: 0;
+    border-radius: 0;
+  }
+  #my-picture{
+    width: 100%;
+  }
+  #my-picture img{
+    display: block;
+    margin: 15px auto;
+  }
+  .item{
+    max-width: 100%;
+  }
+  form.contact-form {
+   width: 60%;
+ }
